@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/6b5dbc708d.js" crossorigin="anonymous"></script>
+    <title>Going Places</title>
+</head>
+<h1>
+    Our trips to some places...
+</h1>
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">&#8679;</button>
+    <header>
+        <div class="topnav">
+            <a class="active menu" href="#home" id="rect">Home</a>
+            <a id="menu" href="#NY18">New York 2018</a>
+            <a id="menu" href="#NY19">New York 2019</a>
+            <a id="menu" href="#SF">San Francisco</a>
+            <a id="menu" href="#jump">Jump to Video Links</a>
+        </div>
+    </header>
+    <main>
+
+        <div>
+            <h2>Here you can find some of our photos from 2018 New York trip</h2>
+        </div>
+        <div class="carousel-container">
+            <i class="fas fa-arrow-circle-left" id="prevBtn"></i>
+            <i class="fas fa-arrow-circle-right" id="nextBtn"></i>
+            <div class="carousel-slide">
+                <img src="Gallery/2018/5.jpg" id="lastClone" alt="">
+                <img src="Gallery/2018/1.jpg" alt="">
+                <img src="Gallery/2018/2.jpg" alt="">
+                <img src="Gallery/2018/4.jpg" alt="">
+                <img src="Gallery/2018/5.jpg" alt="">
+                <img src="Gallery/2018/1.jpg" id="firstClone" alt="">
+            </div>
+        </div>
+        <script src="app.js"></script>
+
+        <nav class="nav-parameters">
+            <figure>
+                <figcaption id="jump">Take a look at our videos from previous trips</figcaption>
+            </figure>
+
+            <iframe id="player" type="text/html" width="20%" height="auto" src="https://www.youtube.com/embed/F8sOjfJOtKk" frameborder="0" class="border"></iframe>
+            <iframe id="player" type="text/html" width="20%" height="auto" src="https://www.youtube.com/embed/1GHzZRy-iwE" frameborder="0" class="border"></iframe>
+            <iframe id="player" type="text/html" width="20%" height="auto" src="https://www.youtube.com/embed/1LoaAEFo0JU" frameborder="0" class="border"></iframe>
+        </nav>
+
+    </main>
+    <script>
+        var mybutton = document.getElementById("myBtn");
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 60) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <footer>
+        <a href="https://www.instagram.com/sergey._yurin/?hl=en" class="fa fa-instagram" target="_blank"></a>
+        <a href="https://www.instagram.com/kristinakris1992/?hl=en" class="fa fa-instagram" target="_blank"></a>
+        <figure class="fullCard">
+            <header class="header-position">
+                <figcaption class="profile-name">
+                    <h3>Sergey Yurin</h3>
+                    <h4>@RealSergeyYurin</h4>
+                </figcaption>
+                <figcaption class="follow-btn">
+                    <a href="https://twitter.com/RealSergeyYurin" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false" data-size="large">Follow</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </figcaption>
+            </header>
+        </figure>
+    </footer>
+</body>
+
+</html>
